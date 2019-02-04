@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = 'ارسل'
+const prefix = "-"
 
 
 client.on('ready', () => {
@@ -37,7 +37,7 @@ client.on("message", message => {
         let args = message.content.split(' ').slice(1).join(' ');
     if(message.content.split(' ')[0] == prefix + 'bc') {
         if (!args[1]) {
-    message.channel.send("**bc <message>**");
+    message.channel.send(prefix +"ارسل");
     return;
     }
             message.guild.members.forEach(m => {
