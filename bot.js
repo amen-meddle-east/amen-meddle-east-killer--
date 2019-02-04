@@ -37,7 +37,7 @@ client.on("message", message => {
         let args = message.content.split(' ').slice(1).join(' ');
     if(message.content.split(' ')[0] == prefix + 'bc') {
         if (!args[1]) {
-    message.channel.send(prefix +"ارسل");
+    message.channel.send(prefix +"bc");
     return;
     }
             message.guild.members.forEach(m => {
