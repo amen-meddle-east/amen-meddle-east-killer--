@@ -126,7 +126,7 @@ if (message.content.startsWith(adminprefix + 'avatar')) {
 
 client.on('message', msg => {
 
-    if (msg.content == adminprefix + "join") {
+    if (msg.content ==adminprefix + "join") {
         if (msg.member.voiceChannel) {
 
      if (msg.member.voiceChannel.joinable) {
