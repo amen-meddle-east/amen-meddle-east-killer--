@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "-"
+const devs = ["406076958980571147"];
+const adminprefix = ["/bc"];
 
 
 client.on('ready', () => {
@@ -57,6 +59,23 @@ client.on("message", message => {
             return;
         }
     });
-	
+
+
+
+
+client.on('message', message => {
+    if (message.content === adminprefix + "shelp") {
+        let helpEmbed = new Discord.RichEmbed()
+        .setTitle('**...اوامر الستريم...**')
+        .addField('name','لتغيير الاسم')
+        .addField('avatar','لتغير الصورة')
+        .addField('twitch','لوضع تويتش')
+        .addField('play', 'لوضع بلاينق')
+        .addField('watch','لوضع واتشينق')
+	.addField('listen','ليسين')
+        .setFooter('(,help) لاظهار الاوامر ')
+      message.channel.send(helpEmbed);
+    }
+});
 
 client.login(process.env.BOT_TOKEN);
